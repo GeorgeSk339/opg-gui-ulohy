@@ -11,13 +11,11 @@ import javafx.stage.Stage;
 
 public class Application extends javafx.application.Application {
 
-    // Premenné musia byť prístupné pre metódy convert
     private TextField fField;
     private TextField cField;
 
     @Override
     public void start(Stage stage) {
-        // --- Prvý riadok (Celsius) ---
         Label labelC = new Label("Stupne Celsia:");
         cField = new TextField("0");
         Label lblCUnit = new Label("C");
@@ -26,7 +24,6 @@ public class Application extends javafx.application.Application {
         rowC.setAlignment(Pos.CENTER_RIGHT);
         rowC.setPadding(new Insets(10));
 
-        // --- Druhý riadok (Fahrenheit) ---
         Label labelF = new Label("Stupne Fahrenheita:");
         fField = new TextField("32");
         Label lblFUnit = new Label("F");
@@ -35,7 +32,6 @@ public class Application extends javafx.application.Application {
         rowF.setAlignment(Pos.CENTER_RIGHT);
         rowF.setPadding(new Insets(10));
 
-        // --- Hlavný kontajner (VBox) ---
         VBox root = new VBox(0, rowC, rowF);
 
         // Nastavenie eventov
@@ -48,7 +44,6 @@ public class Application extends javafx.application.Application {
         stage.show();
     }
 
-    // Metódy musia byť tu (mimo start)
     public void convertCtoF() {
         try {
             String input = cField.getText().replace(',', '.');
@@ -58,7 +53,6 @@ public class Application extends javafx.application.Application {
             double f = (c * 1.8) + 32;
             fField.setText(String.format("%.2f", f));
         } catch (NumberFormatException e) {
-            // fField.setText(""); // Voliteľné: vymazať ak je chyba
         }
     }
 
@@ -71,7 +65,6 @@ public class Application extends javafx.application.Application {
             double c = (f - 32) / 1.8;
             cField.setText(String.format("%.2f", c));
         } catch (NumberFormatException e) {
-            // cField.setText("");
         }
     }
 
