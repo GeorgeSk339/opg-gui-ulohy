@@ -1,0 +1,21 @@
+#root {
+    -fx-background-image: url("calculator.jpeg");
+    -fx-background-size: cover;
+}
+
+
+
+.text-field, .label {
+    -fx-text-fill: #930b1e;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.8;
+}
+
+.text-field:focused {
+    -fx-border-color: #930b1e;
+}
+
+.text-field {
+    -fx-border-color: "white";
+}

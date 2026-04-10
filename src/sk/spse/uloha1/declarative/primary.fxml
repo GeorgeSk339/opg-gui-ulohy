@@ -6,21 +6,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.spse.uloha1.declarative.Controller">
+<VBox id="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.spse.uloha1.declarative.Controller">
    <children>
-      <HBox alignment="CENTER_RIGHT" spacing="20">
+      <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" spacing="20">
       
           <padding>
               <Insets topRightBottomLeft="10" />
           </padding>
       
-          <Label text="Celsius" />
+          <Label id="text" text="Celsius" />
       
           <TextField fx:id="cField" editable="true" onKeyTyped="#convertCtoF" style="-fx-padding: 10 20 10 20;" text="0" />
          <Label layoutX="20.0" layoutY="30.0" text="C" />
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" spacing="20">
+      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" spacing="20">
          <padding>
             <Insets topRightBottomLeft="10" />
          </padding>

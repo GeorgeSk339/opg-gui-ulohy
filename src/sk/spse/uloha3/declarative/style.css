@@ -1,0 +1,57 @@
+.root {
+    -fx-background-image: url("ele-wallpaper2.jpeg");
+    -fx-background-size: cover;
+}
+
+.label-header {
+    -fx-text-fill: #b80101;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 24px;
+    -fx-view-order: -1;
+    -fx-effect: dropshadow(gaussian, #dee1ea, 20, 0.9, 0, 0);
+}
+
+.text-area {
+    -fx-background-color: #FFFA;
+    -fx-effect: dropshadow(gaussian, #dee1ea, 20, 0.9, 0, 0);
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial";
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+.hyperlink {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #dee1ea, 20, 0.9, 0, 0);
+}
+
+.logo {
+    -fx-rotate: -20;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-view-order: 1;
+    transition: -fx-rotate 0.5s ease-out, -fx-scale-x 0.5s ease-out, -fx-scale-y 0.5s ease-out;
+}
+
+.logo:hover {
+    -fx-rotate: 0;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+.logo:pressed {
+    -fx-scale-x: 2.5;
+    -fx-scale-y: 2.5;
+}
+
+.button {
+    -fx-background-color: #FFFA;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
